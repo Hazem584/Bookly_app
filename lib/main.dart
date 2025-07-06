@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'core/helpers/constants.dart';
 import 'features/splash/ui/splash_screen.dart';
@@ -13,13 +15,20 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kPrimaryColor,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => GetMaterialApp(
+          theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: kPrimaryColor,
+            textTheme: GoogleFonts.montserratAlternatesTextTheme(ThemeData.dark().textTheme)
+          ),
+          debugShowCheckedModeBanner: false,
+          home: const SplashScreen(),
+        ),
     );
+    
   }
 }
 
