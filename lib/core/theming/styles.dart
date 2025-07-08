@@ -28,4 +28,8 @@ import 'font_weight_helper.dart';
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font14SemiBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.semiBold,
+  );
  }

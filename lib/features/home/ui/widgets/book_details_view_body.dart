@@ -1,5 +1,6 @@
 import 'package:bookly_app/core/theming/styles.dart';
 import 'package:bookly_app/core/widgets/custom_button.dart';
+import 'package:bookly_app/features/home/ui/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/spacing.dart';
 
@@ -26,9 +27,9 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
             child: CustomBookImage(),
           ),
-          verticalSpace(20),
+          verticalSpace(13),
           Text("The Jungle Book", style: TextStyles.font26Bold),
-          verticalSpace(6),
+          verticalSpace(3),
           Opacity(
             opacity: 0.7,
             child: Text(
@@ -40,8 +41,15 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           verticalSpace(8),
           BookRating(),
-          verticalSpace(25),
+          verticalSpace(20),
           BooksAction(),
+          verticalSpace(20),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text("You can also like", style: TextStyles.font14SemiBold),
+          ),
+          verticalSpace(10),
+          SimilarBooksListView(),
         ],
       ),
     );
