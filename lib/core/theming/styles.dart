@@ -24,4 +24,8 @@ import 'font_weight_helper.dart';
     fontSize: 26.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font18Bold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
  }
