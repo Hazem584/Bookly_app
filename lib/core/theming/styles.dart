@@ -4,5 +4,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'font_weight_helper.dart';
 
  class TextStyles {
-  static TextStyle titleMedium = TextStyle(fontSize: 20.sp, fontWeight: FontWeightHelper.semiBold);
-}
+  static TextStyle font18SemiBold = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle font20Normal = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.normal,
+  );
+  static TextStyle font14Normal = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.normal,
+  );
+  static TextStyle font17Normal = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.normal,
+  );
+ }
