@@ -1,3 +1,3 @@
-abstract class ApiErrorHandler {}
+ class ApiErrorHandler {}
 
 class ServerError extends ApiErrorHandler {}
