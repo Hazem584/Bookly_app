@@ -58,13 +58,12 @@ class _SplashScreenViewState extends State<SplashScreenView>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-    //   Get.to(
-    //     () => const HomeScreen(),
-    //     transition: Transition.rightToLeft,
-    //     duration: kTranstionDuration,
-    //   );
+      //   Get.to(
+      //     () => const HomeScreen(),
+      //     transition: Transition.rightToLeft,
+      //     duration: kTranstionDuration,
+      //   );
       GoRouter.of(context).push(AppRouter.KHomeView);
-    },
-    );
+    });
   }
 }

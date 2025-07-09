@@ -20,15 +20,15 @@ class BooklyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp.router(
-          routerConfig: AppRouter.router,
-          theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: kPrimaryColor,
-            textTheme: GoogleFonts.montserratAlternatesTextTheme(ThemeData.dark().textTheme)
+        routerConfig: AppRouter.router,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: kPrimaryColor,
+          textTheme: GoogleFonts.montserratAlternatesTextTheme(
+            ThemeData.dark().textTheme,
           ),
-          debugShowCheckedModeBanner: false,
         ),
+        debugShowCheckedModeBanner: false,
+      ),
     );
-    
   }
 }
-

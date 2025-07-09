@@ -26,15 +26,13 @@ class HomeView extends StatelessWidget {
           child: Text("Best Seller", style: TextStyles.font18SemiBold),
         ),
         verticalSpace(20),
-         Expanded(
-           child: Padding(
-             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-             child: BestSellerListViewItem(),
-           ),
-         ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: BestSellerListViewItem(),
+          ),
+        ),
       ],
     );
   }
 }
-
-

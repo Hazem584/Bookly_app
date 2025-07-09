@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';import '../../../core/helpers/spacing.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/styles.dart';
 
 import '../../home/ui/widgets/best_seller_view_item.dart';
@@ -15,17 +16,18 @@ class SearchViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:  [
-        CustomTextFiled(),
-        verticalSpace(10),
-         Text("Search Result", style: TextStyles.font18SemiBold,),
-         verticalSpace(20),
-         Expanded(child: SearchResultListView()),
-      ],
+        children: [
+          CustomTextFiled(),
+          verticalSpace(10),
+          Text("Search Result", style: TextStyles.font18SemiBold),
+          verticalSpace(20),
+          Expanded(child: SearchResultListView()),
+        ],
       ),
     );
   }
 }
+
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 
@@ -43,4 +45,3 @@ class SearchResultListView extends StatelessWidget {
     );
   }
 }
-

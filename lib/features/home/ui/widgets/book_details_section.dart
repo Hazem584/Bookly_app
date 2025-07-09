@@ -12,13 +12,10 @@ class BookDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return  Column(
+    return Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: width * 0.19,
-            vertical: 10,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: width * 0.19, vertical: 10),
           child: CustomBookImage(),
         ),
         verticalSpace(13),
@@ -36,7 +33,7 @@ class BookDetailsSection extends StatelessWidget {
         verticalSpace(8),
         BookRating(),
         verticalSpace(20),
-        const  BooksAction(),
+        const BooksAction(),
       ],
     );
   }

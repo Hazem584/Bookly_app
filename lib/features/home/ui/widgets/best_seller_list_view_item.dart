@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'best_seller_view_item.dart';

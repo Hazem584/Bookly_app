@@ -10,7 +10,7 @@ class BooksAction extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Row(
-        children: const  [
+        children: const [
           Expanded(
             child: CustomButton(
               BackgroundColor: Colors.white,
@@ -24,12 +24,12 @@ class BooksAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-              fontSize:18 ,
+              fontSize: 18,
               BackgroundColor: Color(0xff2ef8262),
               textColor: Colors.white,
               text: "Free Preview",
               borderRadius: BorderRadius.only(
-                topRight:Radius.circular(16),
+                topRight: Radius.circular(16),
                 bottomRight: Radius.circular(16),
               ),
             ),
