@@ -20,5 +20,4 @@ class NewsetBooksCubit extends Cubit<NewsetBooksState> {
           (books) => emit(NewsetBooksSuccess(books)),
     );
   }
-
 }
