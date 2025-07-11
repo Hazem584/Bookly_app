@@ -23,7 +23,7 @@ class BestSellerViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.KBookDetailsView);
       },
       child: SizedBox(
-        height: 120.h,
+        height: 130.h,
         child: Row(
           children: [
             CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,),
