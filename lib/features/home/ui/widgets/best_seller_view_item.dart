@@ -1,3 +1,6 @@
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/features/home/ui/widgets/book_rating.dart';
+import 'package:bookly_app/features/home/ui/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -9,7 +12,9 @@ import '../../../../core/route/app_router.dart';
 import '../../../../core/theming/styles.dart';
 
 class BestSellerViewItem extends StatelessWidget {
-  const BestSellerViewItem({super.key});
+   const BestSellerViewItem({super.key, required this.bookModel});
+ final BookModel bookModel;
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +26,7 @@ class BestSellerViewItem extends StatelessWidget {
         height: 120.h,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 2.5 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(8)),
-                  color: Colors.red,
-                  image: DecorationImage(
-                    image: AssetImage(AssetsData.book1),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
+            CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,),
             horizontalSpace(30),
             Expanded(
               child: Column(
@@ -46,7 +39,7 @@ class BestSellerViewItem extends StatelessWidget {
                         GoRouter.of(context).push(AppRouter.KBookDetailsView);
                       },
                       child: Text(
-                        "Harry Potter and the Goblet of Fire",
+                        bookModel.volumeInfo.title!,
                         style: TextStyles.font20Normal,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -58,22 +51,15 @@ class BestSellerViewItem extends StatelessWidget {
                     onTap: () {
                       GoRouter.of(context).push(AppRouter.KBookDetailsView);
                     },
-                    child: Text("J.K Rowling", style: TextStyles.font14Normal),
+                    child: Text(bookModel.volumeInfo.authors![0], style: TextStyles.font14Normal),
                   ),
                   verticalSpace(3),
                   Row(
                     children: [
-                      Text("19.99 €", style: TextStyles.font20Normal),
+                      Text("Free", style: TextStyles.font20Normal),
                       Spacer(),
-                      Icon(
-                        FontAwesomeIcons.solidStar,
-                        color: Colors.amber,
-                        size: 15,
-                      ),
                       horizontalSpace(6.3),
-                      Text("4.9", style: TextStyles.font17Normal),
-                      horizontalSpace(6),
-                      Text("(2500)", style: TextStyles.font14Normal),
+                      BookRating(),
                     ],
                   ),
                 ],
