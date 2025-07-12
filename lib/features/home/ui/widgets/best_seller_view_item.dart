@@ -26,7 +26,7 @@ class BestSellerViewItem extends StatelessWidget {
         height: 130.h,
         child: Row(
           children: [
-            CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,),
+            CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail?? 'assets/images/error_image.png',),
             horizontalSpace(30),
             Expanded(
               child: Column(
