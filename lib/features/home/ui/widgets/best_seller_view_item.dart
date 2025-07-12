@@ -13,8 +13,8 @@ import '../../../../core/theming/styles.dart';
 
 class BestSellerViewItem extends StatelessWidget {
    const BestSellerViewItem({super.key, required this.bookModel});
- final BookModel bookModel;
 
+ final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {

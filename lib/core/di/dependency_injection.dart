@@ -8,4 +8,5 @@ final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
   getIt.registerSingleton<ApiServices>(ApiServices(Dio()));
   getIt.registerSingleton<HomeRepoImpl>(HomeRepoImpl(getIt.get<ApiServices>()));
+
 }
